@@ -11,5 +11,5 @@ Um website criado para uma StartUp no qual o objetivo é mostrar a cultura de ou
 - HTML
 - CSS
 - JavaScript
-
+##
 Atualmente a StartUp foi desagrupada e o projeto teve seu término. Os autores me permitiram compartilhar a parte o projeto (este site) devido a contribuição que tivemos durante o período de atividade da Juacas.
