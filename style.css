@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+body {
+    background-color: #fff;
+    border: 20px solid #ffc800;
+    border-bottom: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+}
+
+header, main {
+    margin: 30px;
+}
+
+.yellow-head {
+    margin-bottom: 40px;
+    width: auto;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc800;
+}
+
+.confete-img {
+    width: 100px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.logo-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+}
+
+summary {
+    margin-bottom: 20px;
+}
+
+.bar-yellow {
+    width: auto;
+    height: 40px;
+    position: static;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc800;
+}
+
+.aside-banner {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid 5px black;
+
+}
+
+.banner-cultures img {
+    width: 30%;
+}
+
+.banner {
+    width: 60%;
+}
+
+.comunity-banner {
+    width: 20%;
+}
+
+.culture {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    border-top: 5px solid black;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: justify;
+    word-break: keep-all;
+    margin: 20px;
+}
+
+.text-culture {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: justify;
+    word-break: keep-all;
+    width: 650px;
+}
+
+.images-obj {
+    width: 700px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 70px;
+}
+
+.rooms {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc800;
+}
+
+.img-flips {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/*Conteudo*/
+
+.country {
+    width: 100%;
+    height: 20%;
+    background-color: #ffffff70;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Front e Back*/
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/*CSS Pop-up*/
+
+/* Pop-up */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+
+.carta {
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.3s;
+}
+
+.carta:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.popup {
+    display: none; /* Oculta o pop-up por padrão */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    width: 70%;
+    height: 60%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.926);
+    display: flex;
+    border: 8px solid #ffc800;
+}
+
+.popup img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.popup-content {
+    flex: 1; /* Ocupa todo o espaço restante */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup h2 {
+    font-size: 5vh;
+}
+
+.popup h2, .popup p, .popup h3{
+    text-align: center;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 5px;
+}
+
+.popup p {
+    font-size: 3.5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+.popup h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+.texts-popup{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ffc800;
+    border-top: #000 5px solid;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.talk {
+    align-items: start;
+    margin-top: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: -2px;
+}
+
+.infor {
+    color: #fff;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
